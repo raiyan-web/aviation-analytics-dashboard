@@ -8,14 +8,8 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 from datetime import datetime
-import sys
-import os
-
-# Add src to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
-
-from data_processor import load_and_process_data
-from analytics import FlightAnalytics
+from src.data_processor import load_and_process_data
+from src.analytics import FlightAnalytics
 
 # Page configuration
 st.set_page_config(
@@ -279,3 +273,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
